@@ -1,7 +1,7 @@
 {
-  "name": "semantic-ui-react",
-  "version": "0.88.2",
-  "description": "The official Semantic-UI-React integration.",
+  "name": "x-semantic-ui-react",
+  "version": "0.88.2-2",
+  "description": "Customize base on the official version 0.88.2",
   "jsnext:main": "dist/es/index.js",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
@@ -15,7 +15,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "cross-env NODE_ENV=production gulp build",
-    "build:changelog": "github_changelog_generator --user Semantic-Org --project Semantic-UI-React --no-issues --no-unreleased --release-branch master --since-tag $(git describe --abbrev=0 --tags $(git rev-parse HEAD~250))",
+    "build:changelog": "github_changelog_generator --user Sinobu-X --project Semantic-UI-React --no-issues --no-unreleased --release-branch master --since-tag $(git describe --abbrev=0 --tags $(git rev-parse HEAD~250))",
     "build:docs": "cross-env NODE_ENV=production gulp build:docs",
     "build:docs:staging": "cross-env STAGING=true yarn build:docs && yarn serve docs/dist",
     "build:dist": "gulp --series build:dist",
@@ -68,14 +68,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://github.com/Semantic-Org/Semantic-UI-React.git"
+    "url": "git+ssh://github.com/Sinobu-X/Semantic-UI-React.git"
   },
-  "author": "Levi Thomason <me@levithomason.com>",
+  "author": "Sinobu-X <wjinp@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Semantic-Org/Semantic-UI-React/issues"
+    "url": "https://github.com/Sinobu-X/Semantic-UI-React/issues"
   },
-  "homepage": "https://github.com/Semantic-Org/Semantic-UI-React#readme",
+  "homepage": "https://github.com/Sinobu-X/Semantic-UI-React#readme",
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "@semantic-ui-react/event-stack": "^3.1.0",
