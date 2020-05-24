@@ -1152,7 +1152,21 @@ export default class Dropdown extends Component {
     if (disabled) return
     if (search) _.invoke(this.searchRef.current, 'focus')
 
-    _.invoke(this.props, 'onOpen', e, this.props)
+    // sinobu
+    // support cancel on open
+    // _.invoke(this.props, 'onOpen', e, this.props)
+
+    const e1 = e || {}
+    if (!e1.preventDefault) {
+      e1.preventDefault = () => {
+        e1.defaultPrevented = true
+      }
+    }
+    _.invoke(this.props, 'onOpen', e1, this.props)
+
+    if (e1.defaultPrevented) {
+      return
+    }
 
     this.trySetState({ open: true })
     this.scrollSelectedItemIntoView()
